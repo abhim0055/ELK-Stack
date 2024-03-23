@@ -87,9 +87,9 @@ STEP 7: Run the docker-compose file
 
     $Go to the elk directory where docker-compose.yml file is present. Run the below command
     
-    sudo docker-compose up
+    sudo docker-compose up -d
 
-    #This will runs the ElasticSearch, logstash and Kibana running in the foreground
+    #This will runs the ElasticSearch, logstash and Kibana running in detached mode
 
 STEP 8: Access Kibana UI using below URL
     
@@ -100,6 +100,18 @@ STEP 8: Access Kibana UI using below URL
     docker inspect <Kibana-container-id> | grep -in "IPAddress"
 
     http://container-ip/5601
-    
+
+STEP 8: Check the logs using below command in case you are facing any issues
+
+    docker-compose logs <container-name> -f
+
+    #Kibana
+    docker-compose logs Kibana -f
+
+    #logstash
+    docker-compose logs logstash -f
+
+    #elasticsearch
+    docker-compose logs elasticsearch -f
     
     
