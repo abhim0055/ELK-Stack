@@ -89,7 +89,7 @@ STEP 7: Run the docker-compose file
     
     sudo docker-compose up -d
 
-    #This will runs the ElasticSearch, logstash and Kibana running in detached mode
+    #This will runs the ElasticSearch, logstash and Kibana conatiners in detached mode (Background)
 
 STEP 8: Access Kibana UI using below URL
     
