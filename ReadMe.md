@@ -46,7 +46,7 @@ STEP 3:  Create folders elk & inside elk create logstash on your current working
 STEP 4: create a logstash.conf file inside logstash and copy below mentioned content
     sudo vi logstash.conf
     #Paste the below content
-    ################################################
+
       input {
           file {
               path => "/your/work/dir/temp/inlog.log"
@@ -58,7 +58,7 @@ STEP 4: create a logstash.conf file inside logstash and copy below mentioned con
               hosts =>["http://elasticsearch:9200"]
           }
       }
-    ##################################################
+
     
 STEP 5: Create a docker-compose.yml file in the elk directory (/your/work/dir/elk/docker-compose.yml)
     sudo vi docker-compose.yml
