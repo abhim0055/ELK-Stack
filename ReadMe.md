@@ -57,7 +57,7 @@ STEP 4: create a logstash.conf file inside logstash and copy below mentioned con
 
       input {
           file {
-              path => "/your/work/dir/temp/inlog.log"
+              path => "/your/home/dir/temp/inlog.log"
           }
       }
       
@@ -71,5 +71,19 @@ STEP 4: create a logstash.conf file inside logstash and copy below mentioned con
 STEP 5: Create a docker-compose.yml file in the elk directory (/your/work/dir/elk/docker-compose.yml)
     sudo vi docker-compose.yml
     Copy the content present in the docker-compose.yml file added in the repo
+
+
+STEP 6: Create file ~/temp/inlog.log 
+
+    sudo vi /home/$user/temp/inlog.log
+
+    #Add some dummy content
+    This file is used to capture logs
+
+STEP 7: Run the docker-compose file
+
+    Go to the elk directory where docker-compose.yml file is present. Run the below command
+    
+    sudo docker-compose up
     
     
