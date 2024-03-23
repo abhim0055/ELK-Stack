@@ -95,7 +95,7 @@ STEP 8: Access Kibana UI using below URL
     
     http://localhost:5601
      
-     or run below command to get container IP address
+    #Run below command to get container IP address
      
     docker inspect <Kibana-container-id> | grep -in "IPAddress"
 
